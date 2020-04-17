@@ -176,3 +176,13 @@ export const FUSION_TX_MIN_IN_OUT_COUNT_RATIO = 4;
  * Max amount to create a single output of
  */
 export const MAX_OUTPUT_SIZE_CLIENT = 100000000000;
+
+/**
+ * Fusion Fee
+ */
+export const FUSION_FEE_V1 = 10000;
+
+/**
+ * Fusion Fee Height
+ */
+export const FUSION_FEE_V1_HEIGHT = 864864;
