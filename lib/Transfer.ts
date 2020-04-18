@@ -172,10 +172,10 @@ export async function sendFusionTransactionAdvanced(
     const paymentID: string = '';
 
     /* Fusion transactions are **not** free */
+    let fee: number = 0;
+
     if (daemon.getNetworkBlockCount() >= FUSION_FEE_V1_HEIGHT) {
-        const fee: number = FUSION_FEE_V1;
-    } else {
-        const fee: number = 0;
+        fee = FUSION_FEE_V1;
     }
 
     let fusionTX: CreatedTransaction;
