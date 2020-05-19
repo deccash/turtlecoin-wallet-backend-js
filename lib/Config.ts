@@ -20,7 +20,7 @@ export interface IConfig {
 
     /**
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
-     * In TurtleCoin, this converts to TRTL
+     * In TurtleCoin, this converts to WRKZ
      */
     addressPrefix?: number;
 
@@ -57,7 +57,7 @@ export interface IConfig {
     blocksPerTick?: number;
 
     /**
-     * Your coins 'ticker', generally used to refer to the coin, i.e. 123 TRTL
+     * Your coins 'ticker', generally used to refer to the coin, i.e. 123 WRKZ
      */
     ticker?: string;
 
@@ -209,19 +209,19 @@ export class Config implements IConfig {
 
     /**
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
-     * In TurtleCoin, this converts to TRTL
+     * In TurtleCoin, this converts to WRKZ
      */
-    public addressPrefix: number = 3914525;
+    public addressPrefix: number = 999730;
 
     /**
      * Request timeout for daemon operations in milliseconds
      */
-    public requestTimeout: number = 10 * 1000;
+    public requestTimeout: number = 12 * 1000;
 
     /**
      * The block time of your coin, in seconds
      */
-    public blockTargetTime: number = 30;
+    public blockTargetTime: number = 60;
 
     /**
      * How often to process blocks, in millseconds
@@ -246,9 +246,9 @@ export class Config implements IConfig {
     public blocksPerTick: number = 1;
 
     /**
-     * Your coins 'ticker', generally used to refer to the coin, i.e. 123 TRTL
+     * Your coins 'ticker', generally used to refer to the coin, i.e. 123 WRKZ
      */
-    public ticker: string = 'TRTL';
+    public ticker: string = 'WRKZ';
 
     /**
      * Most people haven't mined any blocks, so lets not waste time scanning
@@ -269,7 +269,7 @@ export class Config implements IConfig {
     /* Fee to charge per byte of transaction. Will be applied in chunks, see
      * above. This value comes out to 1.953125. We use this value instead of
      * something like 2 because it makes for pretty resulting fees
-     * - 5 TRTL vs 5.12 TRTL. You can read this as.. the fee per chunk
+     * - 5 WRKZ vs 5.12 WRKZ. You can read this as.. the fee per chunk
      * is 500 atomic units. The fee per byte is 500 / chunk size. */
     public minimumFeePerByte = 500.00 / this.feePerByteChunkSize;
 
@@ -277,27 +277,33 @@ export class Config implements IConfig {
      * Mapping of height to mixin maximum and mixin minimum
      */
     public mixinLimits: MixinLimits = new MixinLimits([
-        /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
-        new MixinLimit(440000, 0, 100, 3),
+        /* Height: 10,000, minMixin: 0, maxMixin: 30, defaultMixin: 3 */
+        new MixinLimit(10000, 0, 30, 3),
 
-        /* At height of 620000, static mixin of 7 */
-        new MixinLimit(620000, 7),
+        /* At height of 302,400, mixin of 3-7 */
+        new MixinLimit(302400, 3, 7, 3),
 
-        /* At height of 800000, static mixin of 3 */
-        new MixinLimit(800000, 3),
-    ], 3 /* Default mixin of 3 before block 440,000 */);
+        /* At height of 430,000, mixin of 0-7 */
+        new MixinLimit(430000, 0, 7, 3),
+
+        /* At height of 658,500, mixin of 1-3 */
+        new MixinLimit(658500, 1, 3, 1),
+
+        /* At height of 1,000,000, static mixin of 1 */
+        new MixinLimit(1000000, 1, 1, 1),
+    ], 3 /* Default mixin of 3 before block 10,000 */);
 
     /**
      * The length of a standard address for your coin
      */
-    public standardAddressLength: number = 99;
+    public standardAddressLength: number = 98;
 
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
        payment ID's are 64 chars, and base58 encoding is done by encoding
        chunks of 8 chars at once into blocks of 11 chars, we can calculate
        this automatically */
-    public integratedAddressLength: number = 99 + ((64 * 11) / 8);
+    public integratedAddressLength: number = 98 + ((64 * 11) / 8);
 
     /**
      * A replacement function for the JS/C++ underivePublicKey.
@@ -365,9 +371,9 @@ export class Config implements IConfig {
 
     /**
      * The amount of blocks to take from the daemon per request. Cannot take
-     * more than 100.
+     * more than 50.
      */
-    public blocksPerDaemonRequest: number = 100;
+    public blocksPerDaemonRequest: number = 50;
 
     /**
      * The amount of seconds to permit not having fetched a block from the
