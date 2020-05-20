@@ -477,6 +477,12 @@ export async function sendTransactionAdvanced(
         paymentID = '';
     }
 
+    logger.log(
+        `paymentID: ${paymentID}`,
+        LogLevel.DEBUG,
+        LogCategory.TRANSACTIONS,
+    );
+
     if (subWalletsToTakeFrom === undefined || subWalletsToTakeFrom.length === 0) {
         subWalletsToTakeFrom = subWallets.getAddresses();
 
