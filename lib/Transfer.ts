@@ -1308,6 +1308,12 @@ async function makeTransaction(
             LogCategory.TRANSACTIONS,
         );
 
+        logger.log(
+            `Additional params mixin: ${mixin.toString()}, fee: ${fee.toString()}, paymentID: ${paymentID}`,
+            LogLevel.DEBUG,
+            LogCategory.TRANSACTIONS,
+        );
+
         return [tx, undefined];
     } catch (err) {
         logger.log(
