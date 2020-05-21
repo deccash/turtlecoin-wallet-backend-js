@@ -771,6 +771,12 @@ export async function sendTransactionAdvanced(
                         config,
                     );
 
+                    logger.log(
+                        `result After makeTransaction in sendTransactionAdvanced(): ${JSON.stringify(result, null, 4)}`,
+                        LogLevel.DEBUG,
+                        LogCategory.TRANSACTIONS,
+                    );
+
                     if (success) {
                         txResult = result;
                         changeRequired = change;
