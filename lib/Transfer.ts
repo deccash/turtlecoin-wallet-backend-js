@@ -809,6 +809,12 @@ export async function sendTransactionAdvanced(
 
                 const [tx, err] = txResult;
 
+                logger.log(
+                    `tx After makeTransaction in sendTransactionAdvanced(): ${JSON.stringify(tx, null, 4)}`,
+                    LogLevel.DEBUG,
+                    LogCategory.TRANSACTIONS,
+                );
+
                 if (err) {
                     logger.log(
                         `Error creating transaction, ${err.toString()}`,
