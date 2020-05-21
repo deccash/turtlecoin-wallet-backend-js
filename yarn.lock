@@ -1951,15 +1951,15 @@ turtlecoin-base58@^0.0.6:
     big-integer "^1.6.48"
 
 turtlecoin-crypto@^4.0.9:
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/turtlecoin-crypto/-/turtlecoin-crypto-4.0.9.tgz#eac88fc0ef6f169096973d0f6b888875ed8e2369"
-  integrity sha512-QbyRrGEipFDzm069USjvRgze2ixu+CbLVoL68UrFjGQW6XJg4Ggmh0IITfMjxBMMWFDAkX1NFoap87rCLfuSVw==
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/turtlecoin-crypto/-/turtlecoin-crypto-4.0.10.tgz#7883470bb8c1059b254145c8de4d702be908b745"
+  integrity sha512-9w81sEqVaXhfu+vW+gBQVKlwhlrMtG4l9Pul4a4+YW/bD7mju9wXLAbVbj/COXnKAEKYm9YQ6xHQcvi5L5rHng==
   dependencies:
     bindings "^1.5.0"
     js-sha3 "^0.8.0"
     nan "^2.14.1"
     prebuild-install "^5.3.3"
-    typescript "^3.8.3"
+    typescript "^3.9.3"
 
 turtlecoin-mnemonics@^0.0.6:
   version "0.0.6"
@@ -1969,9 +1969,9 @@ turtlecoin-mnemonics@^0.0.6:
     crc "^3.8.0"
     get-random-values "^1.2.0"
 
-"turtlecoin-utils@https://github.com/wrkzcoin/turtlecoin-utils#dev_wrkz":
+"turtlecoin-utils@https://github.com/wrkzcoin/turtlecoin-utils#dev_wrkz_dbg":
   version "2.0.0"
-  resolved "https://github.com/wrkzcoin/turtlecoin-utils#1bae497cabda0703976a49782f808b97ec3fc1b5"
+  resolved "https://github.com/wrkzcoin/turtlecoin-utils#f01a0d40986de0154578f5565dabbe855bad978d"
   dependencies:
     aes-js "^3.1.2"
     big-integer "^1.6.48"
@@ -2020,6 +2020,11 @@ typescript@^3.8.3:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
   integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
+
+typescript@^3.9.3:
+  version "3.9.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
+  integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
 
 uglify-js@^3.1.4:
   version "3.5.10"
