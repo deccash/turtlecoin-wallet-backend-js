@@ -1915,7 +1915,7 @@ turtlecoin-mnemonics@^0.0.6:
 
 "turtlecoin-utils@https://github.com/wrkzcoin/turtlecoin-utils#dev_wrkz_dbg":
   version "2.0.0"
-  resolved "https://github.com/wrkzcoin/turtlecoin-utils#5a79dcfeb0e95e0d2cf853b3def40908f5943cc2"
+  resolved "https://github.com/wrkzcoin/turtlecoin-utils#af1b707eda0d93bfdfc9d066d852a60a9520de88"
   dependencies:
     aes-js "^3.1.2"
     big-integer "^1.6.48"
